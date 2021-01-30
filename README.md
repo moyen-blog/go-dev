@@ -14,7 +14,7 @@ The underlying hot reloading is provided via [cespare/reflex](https://github.com
 
 Docker Compose provides an easy way to use this in conjunctions with other servers. The following `docker-compose.yml` illustrates how to define a service using the Go Development Image.
 
-```
+```yaml
 services:
   server:
     image: ghcr.io/moyen-blog/go-dev:latest
@@ -29,7 +29,7 @@ To configure watched file extensions, provide the extensions to the container se
 
 The following `docker-compose.yml` file creates a service that watches `.go` and `.c` files.
 
-```
+```yaml
 services:
   server:
     image: ghcr.io/moyen-blog/go-dev:latest

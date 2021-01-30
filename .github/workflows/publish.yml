@@ -17,10 +17,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
-      - name: Push Image
+      - name: Build and Push
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: |
-            ghcr.io/moyen-blog/go-dev:latest
-            ghcr.io/moyen-blog/go-dev:${GITHUB_REF:10}
+          tags: ghcr.io/${{ github.repository_owner }}/app:latest

@@ -1,4 +1,4 @@
-FROM golang
+FROM golang:1.16
 ENV EXT=go|gohtml|css
 WORKDIR /app
 RUN go get github.com/cespare/reflex
